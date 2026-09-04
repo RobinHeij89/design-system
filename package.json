@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Robin Heij's personal design system — tokens and components used on robinheij.nl",
   "type": "module",
+  "packageManager": "pnpm@10.28.0",
   "license": "MIT",
   "repository": {
     "type": "git",
