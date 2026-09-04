@@ -3,6 +3,15 @@ import './animations.css';
 
 export { useTheme } from './hooks/use-theme';
 export { useScrollReveal } from './hooks/use-scroll-reveal';
+export { useScrollUnmask } from './hooks/use-scroll-unmask';
+
+// Typography
+export { Eyebrow } from './components/eyebrow/eyebrow';
+export type { EyebrowProps } from './components/eyebrow/eyebrow';
+export { DisplayHeading } from './components/display-heading/display-heading';
+export type { DisplayHeadingProps, DisplayHeadingSize } from './components/display-heading/display-heading';
+export { Lead } from './components/lead/lead';
+export type { LeadProps } from './components/lead/lead';
 
 export { ThemeToggle } from './components/theme-toggle/theme-toggle';
 export type { Theme } from './components/theme-toggle/theme-toggle';
@@ -10,6 +19,8 @@ export type { Theme } from './components/theme-toggle/theme-toggle';
 export { CustomCursor } from './components/custom-cursor/custom-cursor';
 export { NameRevealer } from './components/name-revealer/name-revealer';
 export { Marquee } from './components/marquee/marquee';
+export { ScrollUnmaskImage } from './components/scroll-unmask-image/scroll-unmask-image';
+export type { ScrollUnmaskImageProps } from './components/scroll-unmask-image/scroll-unmask-image';
 export { SocialLinks } from './components/social-links/social-links';
 export type { SocialLink } from './components/social-links/social-links';
 export { SocialIcon } from './components/social-links/social-icons';

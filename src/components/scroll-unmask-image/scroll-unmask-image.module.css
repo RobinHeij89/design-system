@@ -1,0 +1,26 @@
+.unmask {
+  --p: 0;
+  position: relative;
+  width: 100%;
+  clip-path: inset(calc((1 - var(--p)) * 12%) calc((1 - var(--p)) * 20%) round 4px);
+  transform: scale(calc(0.9 + var(--p) * 0.1));
+  transform-origin: center;
+  will-change: clip-path, transform;
+}
+
+.unmask__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  filter: contrast(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .unmask {
+    clip-path: none !important;
+    transform: none !important;
+    will-change: auto;
+  }
+}

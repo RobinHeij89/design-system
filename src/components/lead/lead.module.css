@@ -1,0 +1,24 @@
+.lead {
+  font-family: var(--rh-ds-font-sans);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--rh-ds-color-text);
+  max-width: 620px;
+}
+
+.lead em {
+  font-style: normal;
+  color: var(--rh-ds-color-accent);
+}
+
+.lead strong {
+  font-weight: 700;
+}
+
+.lead a {
+  color: var(--rh-ds-color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
