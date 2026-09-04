@@ -1,8 +1,19 @@
-.unmask {
-  --p: 0;
+.frame {
   position: relative;
   width: 100%;
-  clip-path: inset(calc((1 - var(--p)) * 12%) calc((1 - var(--p)) * 20%) round 4px);
+  overflow: hidden;
+  border-radius: 4px;
+
+  @supports (corner-shape: squircle) {
+    border-radius: calc(4px * var(--rh-ds-squircle-multiplier));
+    corner-shape: squircle;
+  }
+}
+
+.unmask {
+  --p: 0;
+  width: 100%;
+  clip-path: inset(calc((1 - var(--p)) * 12%) calc((1 - var(--p)) * 20%));
   transform: scale(calc(0.9 + var(--p) * 0.1));
   transform-origin: center;
   will-change: clip-path, transform;

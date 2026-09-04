@@ -14,14 +14,19 @@ export type ScrollUnmaskImageProps = HTMLAttributes<HTMLDivElement> & {
 /**
  * Image that starts slightly masked and scaled down, then opens up to its full
  * size as the page scrolls (Hero's photo). Respects `prefers-reduced-motion`.
+ *
+ * The outer frame owns the corner shape (squircle where supported) and clips
+ * to it; the inner element carries the scroll-driven mask/scale animation.
  */
 export const ScrollUnmaskImage: FC<ScrollUnmaskImageProps> = ({ src, alt, range, className, ...rest }) => {
   const ref = useRef<HTMLDivElement>(null);
   useScrollUnmask(ref, range);
 
   return (
-    <div ref={ref} className={clsx(styles.unmask, className)} {...rest}>
-      <img src={src} alt={alt} className={styles.img} />
+    <div className={clsx(styles.frame, className)} {...rest}>
+      <div ref={ref} className={styles.unmask}>
+        <img src={src} alt={alt} className={styles.img} />
+      </div>
     </div>
   );
 };
