@@ -1,0 +1,25 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--rh-ds-color-text);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.65;
+  transition: opacity 0.2s;
+  border-radius: 4px;
+}
+
+.theme-toggle:hover { opacity: 1; }
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle { transition: none; }
+}
