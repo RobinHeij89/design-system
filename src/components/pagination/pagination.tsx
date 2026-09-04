@@ -34,7 +34,7 @@ export const Pagination: FC<PaginationProps> = ({ currentPage, totalPages, onPag
     <nav aria-label="Pagination" className={clsx(styles.pagination, className)}>
       <button
         type="button"
-        className={styles.pagination__arrow}
+        className={styles.arrow}
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage <= 1}
         aria-label="Previous page"
@@ -43,12 +43,12 @@ export const Pagination: FC<PaginationProps> = ({ currentPage, totalPages, onPag
       </button>
       {pages.map((page, i) =>
         page === 'ellipsis' ? (
-          <span key={`ellipsis-${i}`} className={styles.pagination__ellipsis}>…</span>
+          <span key={`ellipsis-${i}`} className={styles.ellipsis}>…</span>
         ) : (
           <button
             key={page}
             type="button"
-            className={clsx(styles.pagination__page, page === currentPage && styles['pagination__page--active'])}
+            className={clsx(styles.page, page === currentPage && styles.active)}
             aria-current={page === currentPage ? 'page' : undefined}
             onClick={() => onPageChange(page)}
           >
@@ -58,7 +58,7 @@ export const Pagination: FC<PaginationProps> = ({ currentPage, totalPages, onPag
       )}
       <button
         type="button"
-        className={styles.pagination__arrow}
+        className={styles.arrow}
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage >= totalPages}
         aria-label="Next page"

@@ -14,7 +14,10 @@ carrying this code inline.
   `.reveal-left/right/bottom`, `.stagger` classes toggled by an `IntersectionObserver`,
   respecting `prefers-reduced-motion`.
 - **Components**: `ThemeToggle`, `CustomCursor`, `NameRevealer`, `Marquee`,
-  `SocialLinks`, `SiteFooter`.
+  `SocialLinks`, `SiteFooter`, `Logo`, `Eyebrow`, `DisplayHeading`, `Lead`,
+  `ScrollUnmaskImage`, `Button`, `TextField`, `Checkbox`, `Radio`, `Select`,
+  `Tabs`, `Breadcrumbs`, `Pagination`, `Menu`, `Alert`, `Modal`, `Tooltip`,
+  `Spinner`.
 - **`useTheme()`** — light/dark state persisted to `localStorage`, applied via
   `data-theme` on `<html>`.
 
@@ -61,6 +64,11 @@ Import `@robinheij89/design-system/style.css` once, near the app root — it bun
 tokens + animation utilities + component styles. Need just the raw tokens (e.g. to
 mirror the palette outside a bundler)? Import `@robinheij89/design-system/tokens.css`
 directly.
+
+## Contributing
+
+CSS conventions (CSS Modules, nesting instead of BEM, squircle corners) are documented
+in [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Development
 

@@ -33,7 +33,7 @@ const SunIcon = () => (
 export const ThemeToggle: FC<ThemeToggleProps> = ({ theme, onToggle }) => (
   <button
     type="button"
-    className={styles['theme-toggle']}
+    className={styles.themeToggle}
     onClick={onToggle}
     aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
   >

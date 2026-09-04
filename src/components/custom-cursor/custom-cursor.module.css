@@ -23,9 +23,13 @@
     height    0.5s var(--rh-ds-ease-spring),
     opacity   0.25s var(--rh-ds-ease-out);
   will-change: transform, width, height;
-}
 
-.box[data-active="true"] { opacity: 1; }
+  &[data-active="true"] { opacity: 1; }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
 
 .wrapper {
   position: fixed;
@@ -35,64 +39,59 @@
   z-index: 99999;
   will-change: transform;
   /* Starts hidden off-screen; JS controls opacity on enter/leave */
-}
 
-/* ── Visual dot / shape ── */
-.cursor {
-  --size: 12px;
-  transform: translate(-50%, -50%);
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background: var(--rh-ds-color-accent);
-  box-shadow: inset 0 0 0 0 var(--rh-ds-color-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition:
-    width     var(--rh-ds-duration-normal) var(--rh-ds-ease-spring),
-    height    var(--rh-ds-duration-normal) var(--rh-ds-ease-spring),
-    border-radius var(--rh-ds-duration-normal) var(--rh-ds-ease-spring),
-    background var(--rh-ds-duration-fast) var(--rh-ds-ease-out),
-    box-shadow var(--rh-ds-duration-fast) var(--rh-ds-ease-out);
-}
+  /* ── Visual dot / shape ── */
+  .cursor {
+    --size: 12px;
+    transform: translate(-50%, -50%);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: var(--rh-ds-color-accent);
+    box-shadow: inset 0 0 0 0 var(--rh-ds-color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition:
+      width     var(--rh-ds-duration-normal) var(--rh-ds-ease-spring),
+      height    var(--rh-ds-duration-normal) var(--rh-ds-ease-spring),
+      border-radius var(--rh-ds-duration-normal) var(--rh-ds-ease-spring),
+      background var(--rh-ds-duration-fast) var(--rh-ds-ease-out),
+      box-shadow var(--rh-ds-duration-fast) var(--rh-ds-ease-out);
 
-/* ── Nav state: filled orange circle with a white arrow ── */
-.cursor[data-state="nav"] {
-  --size: 36px;
-}
+    /* ── Nav state: filled orange circle with a white arrow ── */
+    &[data-state="nav"] {
+      --size: 36px;
 
-.cursor[data-state="nav"] .label {
-  color: var(--rh-ds-color-white);
-}
+      .label { color: var(--rh-ds-color-white); }
+    }
 
-/* ── Photo state: grows + shows HI ── */
-.cursor[data-state="photo"] {
-  --size: 44px;
-}
+    /* ── Photo state: grows + shows HI ── */
+    &[data-state="photo"] {
+      --size: 44px;
 
-/* ── Label (arrow / HI text) ── */
-.label {
-  font-family: var(--rh-ds-font-sans);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--rh-ds-color-white);
-  letter-spacing: 0.01em;
-  opacity: 0;
-  transition: opacity var(--rh-ds-duration-fast) var(--rh-ds-ease-out);
-  pointer-events: none;
-  user-select: none;
-  white-space: nowrap;
-}
+      .label { opacity: 1; }
+    }
 
-.cursor[data-state="nav"] .label,
-.cursor[data-state="photo"] .label {
-  opacity: 1;
-}
+    &[data-state="nav"] .label { opacity: 1; }
 
-/* ── Respect reduced motion ── */
-@media (prefers-reduced-motion: reduce) {
-  .cursor,
-  .box { transition: none; }
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+
+    /* ── Label (arrow / HI text) ── */
+    .label {
+      font-family: var(--rh-ds-font-sans);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--rh-ds-color-white);
+      letter-spacing: 0.01em;
+      opacity: 0;
+      transition: opacity var(--rh-ds-duration-fast) var(--rh-ds-ease-out);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+  }
 }

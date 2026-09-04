@@ -22,7 +22,7 @@ export type ButtonProps = ButtonAsButton | ButtonAsAnchor;
 
 /** Primary/secondary/tertiary interactive trigger. Renders an `<a>` when `href` is given. */
 export const Button: FC<ButtonProps> = ({ variant = 'primary', size = 'md', className, children, ...rest }) => {
-  const classes = clsx(styles.button, styles[`button--${variant}`], styles[`button--${size}`], className);
+  const classes = clsx(styles.button, styles[variant], styles[size], className);
 
   if ('href' in rest && rest.href !== undefined) {
     const { href, ...anchorRest } = rest as AnchorHTMLAttributes<HTMLAnchorElement>;

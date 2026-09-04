@@ -19,5 +19,5 @@ export type DisplayHeadingProps = {
  * the accent color, `font-style` reset to normal, matching every existing usage.
  */
 export const DisplayHeading: FC<DisplayHeadingProps> = ({ children, size = 'xl', as: Tag = 'h2', className }) => (
-  <Tag className={clsx(styles.heading, styles[`heading--${size}`], className)}>{children}</Tag>
+  <Tag className={clsx(styles.heading, styles[size], className)}>{children}</Tag>
 );

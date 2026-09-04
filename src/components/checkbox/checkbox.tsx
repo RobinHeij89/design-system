@@ -15,11 +15,11 @@ export const Checkbox: FC<CheckboxProps> = ({ label, id, className, ...rest }) =
 
   return (
     <label htmlFor={inputId} className={clsx(styles.checkbox, className)}>
-      <input id={inputId} type="checkbox" className={styles.checkbox__input} {...rest} />
-      <span className={styles.checkbox__box} aria-hidden="true">
-        <Icon id="check" className={styles.checkbox__check} />
+      <input id={inputId} type="checkbox" className={styles.input} {...rest} />
+      <span className={styles.box} aria-hidden="true">
+        <Icon id="check" className={styles.check} />
       </span>
-      <span className={styles.checkbox__label}>{label}</span>
+      <span className={styles.label}>{label}</span>
     </label>
   );
 };

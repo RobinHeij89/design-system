@@ -14,11 +14,11 @@ export const Radio: FC<RadioProps> = ({ label, id, className, ...rest }) => {
 
   return (
     <label htmlFor={inputId} className={clsx(styles.radio, className)}>
-      <input id={inputId} type="radio" className={styles.radio__input} {...rest} />
-      <span className={styles.radio__circle} aria-hidden="true">
-        <span className={styles.radio__dot} />
+      <input id={inputId} type="radio" className={styles.input} {...rest} />
+      <span className={styles.circle} aria-hidden="true">
+        <span className={styles.dot} />
       </span>
-      <span className={styles.radio__label}>{label}</span>
+      <span className={styles.label}>{label}</span>
     </label>
   );
 };

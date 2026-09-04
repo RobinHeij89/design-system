@@ -19,9 +19,9 @@ export const Marquee: FC<MarqueeProps> = ({ text, repeat = 6, speed = 32, ariaLa
   const content = text.repeat(repeat);
   return (
     <div className={clsx(styles.marquee, className)} aria-label={ariaLabel}>
-      <div className={styles.marquee__track} style={{ animationDuration: `${speed}s` }}>
-        <span className={styles.marquee__content}>{content}</span>
-        <span className={styles.marquee__content} aria-hidden="true">{content}</span>
+      <div className={styles.track} style={{ animationDuration: `${speed}s` }}>
+        <span className={styles.content}>{content}</span>
+        <span className={styles.content} aria-hidden="true">{content}</span>
       </div>
     </div>
   );

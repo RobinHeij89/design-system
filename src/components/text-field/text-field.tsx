@@ -19,20 +19,20 @@ export const TextField: FC<TextFieldProps> = ({ label, error, helperText, id, cl
 
   return (
     <div className={clsx(styles.field, className)}>
-      <label htmlFor={inputId} className={styles.field__label}>
+      <label htmlFor={inputId} className={styles.label}>
         {label}
-        {required && <span className={styles.field__required} aria-hidden="true"> *</span>}
+        {required && <span className={styles.required} aria-hidden="true"> *</span>}
       </label>
       <input
         id={inputId}
-        className={clsx(styles.field__input, error && styles['field__input--error'])}
+        className={clsx(styles.input, error && styles.error)}
         aria-invalid={!!error}
         aria-describedby={error || helperText ? messageId : undefined}
         required={required}
         {...rest}
       />
       {(error || helperText) && (
-        <p id={messageId} className={clsx(styles.field__message, error && styles['field__message--error'])}>
+        <p id={messageId} className={clsx(styles.message, error && styles.error)}>
           {error ?? helperText}
         </p>
       )}

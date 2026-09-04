@@ -36,7 +36,7 @@ export const Tabs: FC<TabsProps> = ({ tabs, activeId, onChange, className }) => 
 
   return (
     <div className={clsx(styles.tabs, className)}>
-      <div ref={listRef} role="tablist" className={styles.tabs__list} onKeyDown={onKeyDown}>
+      <div ref={listRef} role="tablist" className={styles.list} onKeyDown={onKeyDown}>
         {tabs.map(tab => (
           <button
             key={tab.id}
@@ -48,7 +48,7 @@ export const Tabs: FC<TabsProps> = ({ tabs, activeId, onChange, className }) => 
             aria-controls={`tabpanel-${tab.id}`}
             tabIndex={tab.id === activeId ? 0 : -1}
             disabled={tab.disabled}
-            className={clsx(styles.tabs__tab, tab.id === activeId && styles['tabs__tab--active'])}
+            className={clsx(styles.tab, tab.id === activeId && styles.active)}
             onClick={() => onChange(tab.id)}
           >
             {tab.label}
@@ -56,7 +56,7 @@ export const Tabs: FC<TabsProps> = ({ tabs, activeId, onChange, className }) => 
         ))}
       </div>
       {active && (
-        <div role="tabpanel" id={`tabpanel-${active.id}`} aria-labelledby={`tab-${active.id}`} className={styles.tabs__panel}>
+        <div role="tabpanel" id={`tabpanel-${active.id}`} aria-labelledby={`tab-${active.id}`} className={styles.panel}>
           {active.content}
         </div>
       )}

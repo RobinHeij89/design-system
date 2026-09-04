@@ -92,6 +92,11 @@
   --rh-ds-radius-lg:   16px;
   --rh-ds-radius-pill: 999px;
 
+  /* Squircle corners (`corner-shape: squircle`) read a visually flatter curve
+     than a normal rounded corner at the same radius, so wherever it's
+     supported the radius is scaled up by this factor to compensate. */
+  --rh-ds-squircle-multiplier: 5;
+
   /* Breakpoints (for reference in JS; use CSS custom media in CSS) */
   --rh-ds-bp-sm: 640px;
   --rh-ds-bp-md: 1024px;

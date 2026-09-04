@@ -38,23 +38,23 @@ export const Modal: FC<ModalProps> = ({ open, onClose, title, children, classNam
   if (!open) return null;
 
   return createPortal(
-    <div className={styles.modal__overlay} onMouseDown={onClose}>
+    <div className={styles.overlay} onMouseDown={onClose}>
       <div
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="rh-ds-modal-title"
         tabIndex={-1}
-        className={clsx(styles.modal, className)}
+        className={clsx(styles.dialog, className)}
         onMouseDown={e => e.stopPropagation()}
       >
-        <div className={styles.modal__header}>
-          <h2 id="rh-ds-modal-title" className={styles.modal__title}>{title}</h2>
-          <button type="button" className={styles.modal__close} onClick={onClose} aria-label="Close">
+        <div className={styles.header}>
+          <h2 id="rh-ds-modal-title" className={styles.title}>{title}</h2>
+          <button type="button" className={styles.close} onClick={onClose} aria-label="Close">
             <Icon id="close" />
           </button>
         </div>
-        <div className={styles.modal__body}>{children}</div>
+        <div className={styles.body}>{children}</div>
       </div>
     </div>,
     document.body,

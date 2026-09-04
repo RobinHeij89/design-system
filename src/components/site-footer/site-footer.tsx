@@ -13,10 +13,10 @@ type SiteFooterProps = {
 
 export const SiteFooter: FC<SiteFooterProps> = ({ href, siteName, copyright }) => (
   <footer className={styles.footer}>
-    <a href={href} className={styles.footer__logo}>
-      <Logo size={40} className={styles.footer__mark} />
-      <span className={styles.footer__name}>{siteName}</span>
+    <a href={href} className={styles.logo}>
+      <Logo size={40} />
+      <span className={styles.name}>{siteName}</span>
     </a>
-    <p className={styles.footer__copy}>{copyright}</p>
+    <p className={styles.copy}>{copyright}</p>
   </footer>
 );

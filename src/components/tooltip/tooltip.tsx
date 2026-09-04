@@ -25,7 +25,7 @@ export const Tooltip: FC<TooltipProps> = ({ content, side = 'top', children, cla
   return (
     <span className={clsx(styles.tooltip, className)}>
       {trigger}
-      <span role="tooltip" id={id} className={clsx(styles.tooltip__bubble, styles[`tooltip__bubble--${side}`])}>
+      <span role="tooltip" id={id} className={clsx(styles.bubble, styles[side])}>
         {content}
       </span>
     </span>

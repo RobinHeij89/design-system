@@ -1,28 +1,28 @@
 .spinner {
   display: inline-flex;
   color: var(--rh-ds-color-primary);
-}
 
-.spinner__svg {
-  animation: rh-ds-spin 0.8s linear infinite;
-}
+  .svg {
+    animation: rh-ds-spin 0.8s linear infinite;
+  }
 
-.spinner--sm .spinner__svg { width: 16px; height: 16px; }
-.spinner--md .spinner__svg { width: 24px; height: 24px; }
-.spinner--lg .spinner__svg { width: 40px; height: 40px; }
+  &.sm .svg { width: 16px; height: 16px; }
+  &.md .svg { width: 24px; height: 24px; }
+  &.lg .svg { width: 40px; height: 40px; }
 
-.spinner__srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+  .srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .svg { animation-duration: 1.6s; }
+  }
 }
 
 @keyframes rh-ds-spin {
   to { transform: rotate(360deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .spinner__svg { animation-duration: 1.6s; }
 }

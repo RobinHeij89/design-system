@@ -2,55 +2,65 @@
   position: relative;
   display: inline-block;
   font-family: var(--rh-ds-font-sans);
-}
 
-.menu__trigger {
-  font: inherit;
-  color: inherit;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+  .trigger {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 
-.menu__list {
-  position: absolute;
-  top: calc(100% + var(--rh-ds-space-2));
-  left: 0;
-  z-index: 10;
-  min-width: 180px;
-  display: flex;
-  flex-direction: column;
-  padding: var(--rh-ds-space-2);
-  background: var(--rh-ds-color-bg);
-  border: 1.5px solid var(--rh-ds-color-border);
-  border-radius: var(--rh-ds-radius-md);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
+  .list {
+    position: absolute;
+    top: calc(100% + var(--rh-ds-space-2));
+    left: 0;
+    z-index: 10;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    padding: var(--rh-ds-space-2);
+    background: var(--rh-ds-color-bg);
+    border: 1.5px solid var(--rh-ds-color-border);
+    border-radius: var(--rh-ds-radius-md);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 
-.menu__list--end {
-  left: auto;
-  right: 0;
-}
+    @supports (corner-shape: squircle) {
+      border-radius: calc(var(--rh-ds-radius-md) * var(--rh-ds-squircle-multiplier));
+      corner-shape: squircle;
+    }
 
-.menu__item {
-  text-align: left;
-  padding: var(--rh-ds-space-2) var(--rh-ds-space-3);
-  font-size: var(--rh-ds-font-size-sm);
-  color: var(--rh-ds-color-text);
-  background: none;
-  border: none;
-  border-radius: var(--rh-ds-radius-sm);
-  cursor: pointer;
-}
+    &.end {
+      left: auto;
+      right: 0;
+    }
+  }
 
-.menu__item:hover:not(:disabled) { background: var(--rh-ds-color-surface); }
+  .item {
+    text-align: left;
+    padding: var(--rh-ds-space-2) var(--rh-ds-space-3);
+    font-size: var(--rh-ds-font-size-sm);
+    color: var(--rh-ds-color-text);
+    background: none;
+    border: none;
+    border-radius: var(--rh-ds-radius-sm);
+    cursor: pointer;
 
-.menu__item:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
+    @supports (corner-shape: squircle) {
+      border-radius: calc(var(--rh-ds-radius-sm) * var(--rh-ds-squircle-multiplier));
+      corner-shape: squircle;
+    }
 
-.menu__item:focus-visible {
-  outline: 2px solid var(--rh-ds-color-primary);
-  outline-offset: -2px;
+    &:hover:not(:disabled) { background: var(--rh-ds-color-surface); }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--rh-ds-color-primary);
+      outline-offset: -2px;
+    }
+  }
 }

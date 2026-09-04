@@ -6,19 +6,17 @@
   transform: scale(calc(0.9 + var(--p) * 0.1));
   transform-origin: center;
   will-change: clip-path, transform;
-}
 
-.unmask__img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  filter: contrast(1.02);
-}
+  .img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    filter: contrast(1.02);
+  }
 
-@media (prefers-reduced-motion: reduce) {
-  .unmask {
+  @media (prefers-reduced-motion: reduce) {
     clip-path: none !important;
     transform: none !important;
     will-change: auto;

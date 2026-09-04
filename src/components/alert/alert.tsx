@@ -21,14 +21,14 @@ const ICON: Record<AlertVariant, IconId> = {
 };
 
 export const Alert: FC<AlertProps> = ({ variant = 'info', title, children, onDismiss, className }) => (
-  <div role="alert" className={clsx(styles.alert, styles[`alert--${variant}`], className)}>
-    <span className={styles.alert__icon} aria-hidden="true"><Icon id={ICON[variant]} /></span>
-    <div className={styles.alert__body}>
-      {title && <p className={styles.alert__title}>{title}</p>}
-      <div className={styles.alert__content}>{children}</div>
+  <div role="alert" className={clsx(styles.alert, styles[variant], className)}>
+    <span className={styles.icon} aria-hidden="true"><Icon id={ICON[variant]} /></span>
+    <div className={styles.body}>
+      {title && <p className={styles.title}>{title}</p>}
+      <div className={styles.content}>{children}</div>
     </div>
     {onDismiss && (
-      <button type="button" className={styles.alert__dismiss} onClick={onDismiss} aria-label="Dismiss">
+      <button type="button" className={styles.dismiss} onClick={onDismiss} aria-label="Dismiss">
         <Icon id="close" />
       </button>
     )}

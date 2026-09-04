@@ -21,7 +21,7 @@ export const ScrollUnmaskImage: FC<ScrollUnmaskImageProps> = ({ src, alt, range,
 
   return (
     <div ref={ref} className={clsx(styles.unmask, className)} {...rest}>
-      <img src={src} alt={alt} className={styles.unmask__img} />
+      <img src={src} alt={alt} className={styles.img} />
     </div>
   );
 };

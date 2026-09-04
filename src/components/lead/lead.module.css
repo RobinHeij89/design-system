@@ -6,19 +6,19 @@
   letter-spacing: -0.01em;
   color: var(--rh-ds-color-text);
   max-width: 620px;
-}
 
-.lead em {
-  font-style: normal;
-  color: var(--rh-ds-color-accent);
-}
+  em {
+    font-style: normal;
+    color: var(--rh-ds-color-accent);
+  }
 
-.lead strong {
-  font-weight: 700;
-}
+  strong {
+    font-weight: 700;
+  }
 
-.lead a {
-  color: var(--rh-ds-color-accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  a {
+    color: var(--rh-ds-color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 }

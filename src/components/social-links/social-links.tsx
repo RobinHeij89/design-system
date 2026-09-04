@@ -22,14 +22,14 @@ type SocialLinksProps = {
  * adapts to whatever background it sits on.
  */
 export const SocialLinks: FC<SocialLinksProps> = ({ links, className }) => (
-  <div className={clsx(styles['social-links'], className)}>
+  <div className={clsx(styles.socialLinks, className)}>
     {links.map((link) => (
       <a
         key={link.href}
         href={link.href}
         target={link.href.startsWith('http') ? '_blank' : undefined}
         rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-        className={styles['social-links__link']}
+        className={styles.link}
         aria-label={link.ariaLabel}
       >
         {link.icon}

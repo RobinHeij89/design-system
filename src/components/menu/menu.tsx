@@ -36,7 +36,7 @@ export const Menu: FC<MenuProps> = ({ trigger, items, align = 'start', className
     <div ref={rootRef} className={clsx(styles.menu, className)}>
       <button
         type="button"
-        className={styles.menu__trigger}
+        className={styles.trigger}
         aria-haspopup="menu"
         aria-expanded={open}
         onClick={() => setOpen(o => !o)}
@@ -44,14 +44,14 @@ export const Menu: FC<MenuProps> = ({ trigger, items, align = 'start', className
         {trigger}
       </button>
       {open && (
-        <div role="menu" className={clsx(styles.menu__list, align === 'end' && styles['menu__list--end'])}>
+        <div role="menu" className={clsx(styles.list, align === 'end' && styles.end)}>
           {items.map(item => (
             <button
               key={item.label}
               type="button"
               role="menuitem"
               disabled={item.disabled}
-              className={styles.menu__item}
+              className={styles.item}
               onClick={() => {
                 item.onSelect();
                 setOpen(false);
