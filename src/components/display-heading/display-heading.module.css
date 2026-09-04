@@ -21,3 +21,20 @@
   line-height: 0.95;
   letter-spacing: -0.02em;
 }
+
+@media (width <= 1024px) {
+  .heading--xl {
+    font-size: clamp(52px, 9vw, 100px);
+  }
+}
+
+@media (width <= 640px) {
+  .heading--xl {
+    font-size: clamp(42px, 12vw, 72px);
+    letter-spacing: -0.02em;
+  }
+
+  .heading--lg {
+    font-size: clamp(44px, 12vw, 64px);
+  }
+}
