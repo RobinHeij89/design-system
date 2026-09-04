@@ -70,6 +70,18 @@ pnpm build   # type-check + build dist/
 pnpm lint
 ```
 
+## Storybook
+
+Every component (and the tokens themselves, under **Foundations/Tokens**) has a story:
+
+```bash
+pnpm storybook         # dev server at localhost:6006
+pnpm build-storybook   # static build to storybook-static/
+```
+
+The latest `main` is auto-deployed to GitHub Pages:
+https://robinheij89.github.io/design-system/
+
 ## Releasing
 
 Versioning is handled by [Changesets](https://github.com/changesets/changesets):
