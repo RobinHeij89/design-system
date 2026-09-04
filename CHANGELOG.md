@@ -1,5 +1,13 @@
 # @robinheij89/design-system
 
+## 0.5.1
+
+### Patch Changes
+
+- 3ef8618: `DisplayHeading`: bake in the tablet/mobile font-size overrides for the `xl` and
+  `lg` sizes (matching the exact responsive tuning WorksSection and ContactSection
+  had locally before adopting this component).
+
 ## 0.5.0
 
 ### Minor Changes
