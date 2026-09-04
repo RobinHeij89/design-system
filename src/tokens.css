@@ -1,42 +1,96 @@
 :root {
-  /* Primitive */
-  --rh-ds-color-white:   #FFFFFF;
-  --rh-ds-color-black:   #001621;
-  --rh-ds-color-orange:   #FF4103;
+  /* ── Primitives ── */
+  --rh-ds-color-white:  #FFFFFF;
+  --rh-ds-color-black:  #001621;
+  --rh-ds-color-orange: #FF4103;
+  --rh-ds-color-green:  #1FAA59;
+  --rh-ds-color-red:    #E5484D;
+  --rh-ds-color-amber:  #F5A623;
 
-  /* Colors */
+  /* ── Color system ──
+     Primary/secondary/neutral map onto the brand's black+orange palette;
+     functional colors are fixed regardless of theme, only their tinted
+     background changes between light/dark. */
   --rh-ds-color-bg:      var(--rh-ds-color-white);
+  --rh-ds-color-surface: rgba(0, 22, 33, 0.04);
   --rh-ds-color-text:    var(--rh-ds-color-black);
-  --rh-ds-color-accent:  var(--rh-ds-color-orange);
+
+  --rh-ds-color-primary:            var(--rh-ds-color-orange);
+  --rh-ds-color-primary-text:       var(--rh-ds-color-white);
+  --rh-ds-color-secondary:          var(--rh-ds-color-black);
+  --rh-ds-color-secondary-text:     var(--rh-ds-color-white);
+
   --rh-ds-color-mid:     rgba(0, 22, 33, 0.18);
   --rh-ds-color-muted:   rgba(0, 22, 33, 0.35);
   --rh-ds-color-subtle:  rgba(0, 22, 33, 0.25);
+  --rh-ds-color-border:  rgba(0, 22, 33, 0.18);
 
-  /* Typography */
+  /* Functional (error/success/warning) — same hue in both themes, only the
+     tinted background shifts. */
+  --rh-ds-color-success:    var(--rh-ds-color-green);
+  --rh-ds-color-success-bg: rgba(31, 170, 89, 0.12);
+  --rh-ds-color-error:      var(--rh-ds-color-red);
+  --rh-ds-color-error-bg:   rgba(229, 72, 77, 0.12);
+  --rh-ds-color-warning:    var(--rh-ds-color-amber);
+  --rh-ds-color-warning-bg: rgba(245, 166, 35, 0.14);
+
+  --rh-ds-color-accent: var(--rh-ds-color-primary); /* legacy alias */
+
+  /* ── Typography ── */
   --rh-ds-font-sans: 'Geist', sans-serif;
   --rh-ds-font-mono: 'Geist Mono', monospace;
 
-  /* Layout */
+  --rh-ds-font-size-xs:   12px;
+  --rh-ds-font-size-sm:   14px;
+  --rh-ds-font-size-base: 16px;
+  --rh-ds-font-size-lg:   18px;
+  --rh-ds-font-size-xl:   20px;
+  --rh-ds-font-size-2xl:  24px;
+  --rh-ds-font-size-3xl:  32px;
+  --rh-ds-font-size-4xl:  48px;
+  --rh-ds-font-size-5xl:  64px;
+
+  --rh-ds-font-weight-regular:  400;
+  --rh-ds-font-weight-medium:   500;
+  --rh-ds-font-weight-semibold: 600;
+  --rh-ds-font-weight-bold:     700;
+  --rh-ds-font-weight-black:    900;
+
+  --rh-ds-line-height-tight:   1.1;
+  --rh-ds-line-height-normal:  1.4;
+  --rh-ds-line-height-relaxed: 1.7;
+
+  /* ── Layout / grid ── */
   --rh-ds-nav-height:  72px;
   --rh-ds-nav-z-index: 100;
+  --rh-ds-container-max-width: 1280px;
+  --rh-ds-container-padding:   24px;
+  --rh-ds-grid-columns: 12;
+  --rh-ds-grid-gap:     var(--rh-ds-space-6);
 
   /* Spacing scale (4px base) */
-  --rh-ds-space-1:  4px;   /*  4px */
-  --rh-ds-space-2:  8px;    /*  8px */
-  --rh-ds-space-3:  12px;   /* 12px */
-  --rh-ds-space-4:  16px;      /* 16px */
-  --rh-ds-space-5:  20px;   /* 20px */
-  --rh-ds-space-6:  24px;    /* 24px */
-  --rh-ds-space-8:  32px;      /* 32px */
-  --rh-ds-space-10: 40px;    /* 40px */
-  --rh-ds-space-12: 48px;      /* 48px */
-  --rh-ds-space-14: 56px;    /* 56px */
-  --rh-ds-space-16: 64px;      /* 64px */
-  --rh-ds-space-20: 80px;      /* 80px */
-  --rh-ds-space-24: 96px;      /* 96px */
-  --rh-ds-space-28: 112px;      /* 112px */
-  --rh-ds-space-32: 128px;      /* 128px */
-  --rh-ds-space-40: 160px;     /* 160px */
+  --rh-ds-space-1:  4px;
+  --rh-ds-space-2:  8px;
+  --rh-ds-space-3:  12px;
+  --rh-ds-space-4:  16px;
+  --rh-ds-space-5:  20px;
+  --rh-ds-space-6:  24px;
+  --rh-ds-space-8:  32px;
+  --rh-ds-space-10: 40px;
+  --rh-ds-space-12: 48px;
+  --rh-ds-space-14: 56px;
+  --rh-ds-space-16: 64px;
+  --rh-ds-space-20: 80px;
+  --rh-ds-space-24: 96px;
+  --rh-ds-space-28: 112px;
+  --rh-ds-space-32: 128px;
+  --rh-ds-space-40: 160px;
+
+  /* Radii */
+  --rh-ds-radius-sm:   4px;
+  --rh-ds-radius-md:   8px;
+  --rh-ds-radius-lg:   16px;
+  --rh-ds-radius-pill: 999px;
 
   /* Breakpoints (for reference in JS; use CSS custom media in CSS) */
   --rh-ds-bp-sm: 640px;
@@ -52,10 +106,20 @@
 }
 
 [data-theme="dark"] {
-  --rh-ds-color-bg:     var(--rh-ds-color-black);
-  --rh-ds-color-text:   var(--rh-ds-color-white);
-  --rh-ds-color-accent: var(--rh-ds-color-orange);
-  --rh-ds-color-mid:    rgba(240, 244, 247, 0.12);
-  --rh-ds-color-muted:  rgba(240, 244, 247, 0.40);
-  --rh-ds-color-subtle: rgba(240, 244, 247, 0.22);
+  --rh-ds-color-bg:      var(--rh-ds-color-black);
+  --rh-ds-color-surface: rgba(240, 244, 247, 0.06);
+  --rh-ds-color-text:    var(--rh-ds-color-white);
+
+  --rh-ds-color-primary-text:   var(--rh-ds-color-black);
+  --rh-ds-color-secondary:      var(--rh-ds-color-white);
+  --rh-ds-color-secondary-text: var(--rh-ds-color-black);
+
+  --rh-ds-color-mid:     rgba(240, 244, 247, 0.12);
+  --rh-ds-color-muted:   rgba(240, 244, 247, 0.40);
+  --rh-ds-color-subtle:  rgba(240, 244, 247, 0.22);
+  --rh-ds-color-border:  rgba(240, 244, 247, 0.22);
+
+  --rh-ds-color-success-bg: rgba(31, 170, 89, 0.18);
+  --rh-ds-color-error-bg:   rgba(229, 72, 77, 0.18);
+  --rh-ds-color-warning-bg: rgba(245, 166, 35, 0.2);
 }
