@@ -1,17 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SocialLinks, type SocialLink } from './social-links';
-
-const Placeholder = ({ label }: { label: string }) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" strokeWidth="1.5" />
-    <text x="12" y="16" textAnchor="middle" fontSize="10" fill="currentColor">{label}</text>
-  </svg>
-);
+import { SocialIcon } from './social-icons';
 
 const links: SocialLink[] = [
-  { href: 'https://linkedin.com', ariaLabel: 'LinkedIn', icon: <Placeholder label="in" /> },
-  { href: 'https://instagram.com', ariaLabel: 'Instagram', icon: <Placeholder label="ig" /> },
-  { href: 'mailto:hello@example.com', ariaLabel: 'Email', icon: <Placeholder label="@" /> },
+  { href: 'https://linkedin.com', ariaLabel: 'LinkedIn', icon: <SocialIcon id="linkedin" /> },
+  { href: 'https://instagram.com', ariaLabel: 'Instagram', icon: <SocialIcon id="instagram" /> },
+  { href: 'https://github.com', ariaLabel: 'GitHub', icon: <SocialIcon id="github" /> },
+  { href: 'mailto:hello@example.com', ariaLabel: 'Email', icon: <SocialIcon id="email" /> },
 ];
 
 const meta: Meta<typeof SocialLinks> = {
@@ -22,7 +17,7 @@ const meta: Meta<typeof SocialLinks> = {
     docs: {
       description: {
         component:
-          'Bring your own icons — pass a `links` array of `{ href, ariaLabel, icon }`. `http(s)` links open in a new tab automatically.',
+          'Pass a `links` array of `{ href, ariaLabel, icon }`. `http(s)` links open in a new tab automatically.',
       },
     },
   },

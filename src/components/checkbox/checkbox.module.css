@@ -6,6 +6,10 @@
   font-size: var(--rh-ds-font-size-sm);
   color: var(--rh-ds-color-text);
   cursor: pointer;
+
+  &:has(:disabled){
+    cursor: not-allowed;
+  }
 }
 
 .checkbox__input {

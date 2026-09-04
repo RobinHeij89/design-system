@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import clsx from 'clsx';
+import { Icon } from '../icons/icons';
 import styles from './pagination.module.css';
 
 export type PaginationProps = {
@@ -38,7 +39,7 @@ export const Pagination: FC<PaginationProps> = ({ currentPage, totalPages, onPag
         disabled={currentPage <= 1}
         aria-label="Previous page"
       >
-        ←
+        <Icon id="arrow-left" />
       </button>
       {pages.map((page, i) =>
         page === 'ellipsis' ? (
@@ -62,7 +63,7 @@ export const Pagination: FC<PaginationProps> = ({ currentPage, totalPages, onPag
         disabled={currentPage >= totalPages}
         aria-label="Next page"
       >
-        →
+        <Icon id="arrow-right" />
       </button>
     </nav>
   );

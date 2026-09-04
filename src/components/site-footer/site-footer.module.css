@@ -18,8 +18,6 @@
   color: var(--rh-ds-color-text);
 }
 
-.footer__mark { width: 40px; height: auto; }
-
 .footer__name {
   font-family: var(--rh-ds-font-sans);
   font-size: 12px;
@@ -48,4 +46,3 @@
   }
 }
 
-[data-theme="dark"] .footer__mark { filter: invert(1); }

@@ -46,7 +46,7 @@
   color: var(--rh-ds-color-muted);
 }
 
-.field__message--error { color: var(--rh-ds-color-error); }
+.field__message--error { color: var(--rh-ds-color-error); margin: 0;}
 
 @media (prefers-reduced-motion: reduce) {
   .field__input { transition: none; }

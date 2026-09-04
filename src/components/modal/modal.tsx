@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import type { FC, ReactNode } from 'react';
 import clsx from 'clsx';
+import { Icon } from '../icons/icons';
 import styles from './modal.module.css';
 
 export type ModalProps = {
@@ -49,7 +50,9 @@ export const Modal: FC<ModalProps> = ({ open, onClose, title, children, classNam
       >
         <div className={styles.modal__header}>
           <h2 id="rh-ds-modal-title" className={styles.modal__title}>{title}</h2>
-          <button type="button" className={styles.modal__close} onClick={onClose} aria-label="Close">×</button>
+          <button type="button" className={styles.modal__close} onClick={onClose} aria-label="Close">
+            <Icon id="close" />
+          </button>
         </div>
         <div className={styles.modal__body}>{children}</div>
       </div>

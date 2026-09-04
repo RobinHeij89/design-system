@@ -12,7 +12,14 @@ export { NameRevealer } from './components/name-revealer/name-revealer';
 export { Marquee } from './components/marquee/marquee';
 export { SocialLinks } from './components/social-links/social-links';
 export type { SocialLink } from './components/social-links/social-links';
+export { SocialIcon } from './components/social-links/social-icons';
+export type { SocialIconId, SocialIconProps } from './components/social-links/social-icons';
+export { Logo } from './components/logo/logo';
+export type { LogoProps } from './components/logo/logo';
 export { SiteFooter } from './components/site-footer/site-footer';
+
+export { Icon } from './components/icons/icons';
+export type { IconId, IconProps } from './components/icons/icons';
 
 // Atoms
 export { Button } from './components/button/button';
