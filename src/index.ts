@@ -63,3 +63,11 @@ export { Tooltip } from './components/tooltip/tooltip';
 export type { TooltipProps, TooltipSide } from './components/tooltip/tooltip';
 export { Spinner } from './components/spinner/spinner';
 export type { SpinnerProps, SpinnerSize } from './components/spinner/spinner';
+export { Badge } from './components/badge/badge';
+export type { BadgeProps, BadgeVariant } from './components/badge/badge';
+
+// Data display
+export { Stat, StatRow } from './components/stat/stat';
+export type { StatProps, StatRowProps } from './components/stat/stat';
+export { Stepper } from './components/stepper/stepper';
+export type { StepperProps, StepperStep } from './components/stepper/stepper';
