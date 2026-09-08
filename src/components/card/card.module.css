@@ -1,0 +1,15 @@
+.card {
+  background: var(--rh-ds-color-surface);
+  border: 1px solid var(--rh-ds-color-border);
+  border-radius: var(--rh-ds-radius-lg);
+  padding: var(--rh-ds-space-4);
+
+  @supports (corner-shape: squircle) {
+    border-radius: calc(var(--rh-ds-radius-lg) * var(--rh-ds-squircle-multiplier));
+    corner-shape: squircle;
+  }
+
+  &.done {
+    opacity: 0.55;
+  }
+}

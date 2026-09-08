@@ -67,6 +67,8 @@ export { Badge } from './components/badge/badge';
 export type { BadgeProps, BadgeVariant } from './components/badge/badge';
 
 // Data display
+export { Card } from './components/card/card';
+export type { CardProps } from './components/card/card';
 export { Stat, StatRow } from './components/stat/stat';
 export type { StatProps, StatRowProps } from './components/stat/stat';
 export { Stepper } from './components/stepper/stepper';

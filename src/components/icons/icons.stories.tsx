@@ -1,7 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Icon, type IconId } from './icons';
 
-const iconIds: IconId[] = ['check', 'info', 'error', 'warning', 'close', 'arrow-left', 'arrow-right'];
+const iconIds: IconId[] = [
+  'check',
+  'info',
+  'error',
+  'warning',
+  'close',
+  'arrow-left',
+  'arrow-right',
+  'play',
+  'shuffle',
+  'external-link',
+];
 
 const meta: Meta<typeof Icon> = {
   title: 'Components/Icons',
