@@ -1,5 +1,13 @@
 # @robinheij89/design-system
 
+## 0.7.0
+
+### Minor Changes
+
+- 66af177: Add a `Card` component — a plain content box (surface, border, radius-lg + squircle)
+  generalizing the box treatment duplicated inside `Stat` and `Alert`. Add `play`,
+  `shuffle`, and `external-link` icons.
+
 ## 0.6.1
 
 ### Patch Changes
