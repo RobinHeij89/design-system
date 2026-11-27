@@ -1,5 +1,11 @@
 # @robinheij89/design-system
 
+## 0.8.0
+
+### Minor Changes
+
+- a49ee39: Add `DataTable`: tabular data with optional client-side column sorting, numeric (tabular-figure) columns, clickable rows, an empty state and a footer row.
+
 ## 0.7.0
 
 ### Minor Changes
