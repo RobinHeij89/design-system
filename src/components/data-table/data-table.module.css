@@ -1,0 +1,96 @@
+.dataTable {
+  overflow-x: auto;
+  border: 1px solid var(--rh-ds-color-border);
+  border-radius: var(--rh-ds-radius-md);
+  background: var(--rh-ds-color-surface);
+
+  @supports (corner-shape: squircle) {
+    border-radius: calc(var(--rh-ds-radius-md) * var(--rh-ds-squircle-multiplier));
+    corner-shape: squircle;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--rh-ds-font-size-sm);
+
+    .caption {
+      text-align: start;
+      padding: var(--rh-ds-space-3) var(--rh-ds-space-4);
+      color: var(--rh-ds-color-muted);
+    }
+
+    th,
+    td {
+      padding: var(--rh-ds-space-3) var(--rh-ds-space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--rh-ds-color-border);
+      vertical-align: top;
+
+      &.end {
+        text-align: end;
+      }
+
+      &.numeric {
+        font-family: var(--rh-ds-font-mono);
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+    }
+
+    th {
+      font-weight: var(--rh-ds-font-weight-semibold);
+      color: var(--rh-ds-color-muted);
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      background: var(--rh-ds-color-bg);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tfoot td {
+      font-weight: var(--rh-ds-font-weight-semibold);
+      border-top: 2px solid var(--rh-ds-color-border);
+      border-bottom: none;
+    }
+
+    .clickable {
+      cursor: pointer;
+      transition: background var(--rh-ds-duration-fast) var(--rh-ds-ease-out);
+
+      &:hover,
+      &:focus-visible {
+        background: var(--rh-ds-color-subtle);
+        outline: none;
+      }
+    }
+
+    .sort {
+      all: unset;
+      cursor: pointer;
+      display: inline-flex;
+      gap: var(--rh-ds-space-1);
+      align-items: center;
+
+      &:focus-visible {
+        outline: 2px solid var(--rh-ds-color-accent);
+        outline-offset: 2px;
+      }
+
+      .indicator {
+        opacity: 0;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+
+      &:hover .indicator {
+        opacity: 0.5;
+      }
+    }
+  }
+}
