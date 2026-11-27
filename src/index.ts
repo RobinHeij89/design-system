@@ -73,3 +73,5 @@ export { Stat, StatRow } from './components/stat/stat';
 export type { StatProps, StatRowProps } from './components/stat/stat';
 export { Stepper } from './components/stepper/stepper';
 export type { StepperProps, StepperStep } from './components/stepper/stepper';
+export { DataTable } from './components/data-table/data-table';
+export type { DataTableProps, Column as DataTableColumn } from './components/data-table/data-table';
